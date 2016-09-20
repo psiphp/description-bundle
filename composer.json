@@ -1,0 +1,37 @@
+{
+    "name": "psiphp/description-bundle",
+    "description": "Symfony Bundle integrating the Psi Description component.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Psi Community"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/framework-bundle": "^3.0",
+        "psiphp/description": "^1.0"
+    },
+    "require-dev": {
+        "symfony/console": "^3.0",
+        "symfony/yaml": "^3.0",
+        "symfony/process": "^3.0",
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Psi\\Bundle\\Description\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Psi\\Bundle\\Description\\Tests\\": "tests/",
+            "Psi\\Bundle\\Description\\Example\\": "example/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
