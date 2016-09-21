@@ -11,7 +11,8 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Psi\Bundle\Description\PsiDescriptionBundle()
+            new \Symfony\Bundle\TwigBundle\TwigBundle(),
+            new \Psi\Bundle\Description\PsiDescriptionBundle(),
         ];
 
         return $bundles;

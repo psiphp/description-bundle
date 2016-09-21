@@ -5,6 +5,10 @@ psi_description:
     enhancers:
         - "test"
 
+twig:
+    paths:
+        - %kernel.root_dir%/views
+
 services:
     test_enhancer:
         class: "Psi\\Bundle\\Description\\Example\\src\\TestEnhancer"

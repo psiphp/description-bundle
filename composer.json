@@ -16,7 +16,8 @@
         "symfony/console": "^3.0",
         "symfony/yaml": "^3.0",
         "symfony/process": "^3.0",
-        "phpunit/phpunit": "@stable"
+        "phpunit/phpunit": "@stable",
+        "symfony/twig-bundle": "^3.1"
     },
     "autoload": {
         "psr-4": {
