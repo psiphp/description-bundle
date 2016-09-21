@@ -12,7 +12,6 @@ class FunctionalTestCase extends \PHPUnit_Framework_TestCase
     {
         if ($this->container) {
             return $this->container;
-
         }
         $kernel = new AppKernel('dev', true);
         $kernel->boot();

@@ -2,10 +2,10 @@
 
 namespace Psi\Bundle\Description;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Psi\Bundle\Description\DependencyInjection\Compiler\EnhancerPass;
 use Psi\Bundle\Description\DependencyInjection\Compiler\ExtensionPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class PsiDescriptionBundle extends Bundle
 {

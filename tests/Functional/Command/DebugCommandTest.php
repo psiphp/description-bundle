@@ -3,8 +3,8 @@
 namespace Psi\Bundle\Description\Tests\Functional\Command;
 
 use Psi\Bundle\Description\Tests\Functional\FunctionalTestCase;
-use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\BufferedOutput;
 
 class DebugCommandTest extends FunctionalTestCase
 {
@@ -17,7 +17,7 @@ class DebugCommandTest extends FunctionalTestCase
     public function testCommandShow()
     {
         $output = $this->runCommand([
-            'descriptor' => 'std.title'
+            'descriptor' => 'std.title',
         ]);
         $this->assertContains('StringDescriptor', $output->fetch());
     }

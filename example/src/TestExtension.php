@@ -2,9 +2,9 @@
 
 namespace Psi\Bundle\Description\Example\src;
 
-use Psi\Component\Description\Schema\ExtensionInterface;
-use Psi\Component\Description\Schema\Builder;
 use Psi\Component\Description\Descriptor\StringDescriptor;
+use Psi\Component\Description\Schema\Builder;
+use Psi\Component\Description\Schema\ExtensionInterface;
 
 class TestExtension implements ExtensionInterface
 {

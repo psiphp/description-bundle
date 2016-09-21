@@ -2,13 +2,13 @@
 
 namespace Psi\Bundle\Description\Command;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
+use Psi\Component\Description\Schema\Definition;
 use Psi\Component\Description\Schema\Schema;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
-use Psi\Component\Description\Schema\Definition;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class DebugCommand extends Command
 {
@@ -16,8 +16,7 @@ class DebugCommand extends Command
 
     public function __construct(
         Schema $schema
-    )
-    {
+    ) {
         parent::__construct();
         $this->schema = $schema;
     }
@@ -30,7 +29,7 @@ class DebugCommand extends Command
         $this->setName('psi:debug:description');
         $this->addArgument('descriptor', InputArgument::OPTIONAL, 'Show information for specific descriptor');
         $this->setDescription('List and inspect descriptors');
-        $this->setHelp(<<<EOT
+        $this->setHelp(<<<'EOT'
 Invoke with no arguments in order to list all available descriptors:
 
     $ %command.full_name%
@@ -54,6 +53,7 @@ EOT
         }
 
         $descriptor = $this->schema->getDefinition($key);
+
         return $this->showDescriptor($output, $key, $descriptor);
     }
 
@@ -65,7 +65,7 @@ EOT
         foreach ($this->schema->getDefinitions() as $key => $definition) {
             $table->addRow([
                 sprintf('<comment>%s</comment>', $key),
-                $definition->getInfo()
+                $definition->getInfo(),
             ]);
         }
 
@@ -86,7 +86,7 @@ EOT
         $table->setStyle('compact');
 
         foreach ($data as $key => $value) {
-            $table->addRow([ sprintf('<comment>%s</comment>', $key), $value]);
+            $table->addRow([sprintf('<comment>%s</comment>', $key), $value]);
         }
 
         $table->render();

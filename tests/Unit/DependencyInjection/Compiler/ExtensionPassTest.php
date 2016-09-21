@@ -2,11 +2,10 @@
 
 namespace Psi\Bundle\Description\Tests\Unit\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\Definition;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Psi\Bundle\Description\DependencyInjection\Compiler\ExtensionPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
-use Prophecy\Argument;
 
 class ExtensionPassTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +37,6 @@ class ExtensionPassTest extends \PHPUnit_Framework_TestCase
         $this->pass->process($this->container->reveal());
     }
 
-
     /**
      * It should throw an exception if an unknown extension is specified.
      *
@@ -48,9 +46,9 @@ class ExtensionPassTest extends \PHPUnit_Framework_TestCase
     public function testThrowExceptionUnknownExtension()
     {
         $this->container->findTaggedServiceIds('psi_description.schema_extension')->willReturn([
-            'foobar.service.id' => [[ 'alias' => 'foobar']],
+            'foobar.service.id' => [['alias' => 'foobar']],
         ]);
-        $this->container->getParameter('psi_description.schema.extensions')->willReturn([ 'barbar', 'booboo', 'foobar' ]);
+        $this->container->getParameter('psi_description.schema.extensions')->willReturn(['barbar', 'booboo', 'foobar']);
         $this->pass->process($this->container->reveal());
     }
 
@@ -60,11 +58,11 @@ class ExtensionPassTest extends \PHPUnit_Framework_TestCase
     public function testReplaceExtensions()
     {
         $this->container->findTaggedServiceIds('psi_description.schema_extension')->willReturn([
-            'foobar.service.id' => [[ 'alias' => 'foobar']],
+            'foobar.service.id' => [['alias' => 'foobar']],
         ]);
-        $this->container->getParameter('psi_description.schema.extensions')->willReturn([ 'foobar' ]);
+        $this->container->getParameter('psi_description.schema.extensions')->willReturn(['foobar']);
         $this->schemaDef->replaceArgument(0, [
-            new Reference('foobar.service.id')
+            new Reference('foobar.service.id'),
         ])->shouldBeCalled();
 
         $this->pass->process($this->container->reveal());

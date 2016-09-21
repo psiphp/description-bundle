@@ -2,10 +2,10 @@
 
 namespace Psi\Bundle\Description\Example\src;
 
-use Psi\Component\Description\EnhancerInterface;
-use Psi\Component\Description\Descriptor\StringDescriptor;
-use Psi\Component\Description\Descriptor\ClassDescriptor;
 use Psi\Component\Description\DescriptionInterface;
+use Psi\Component\Description\Descriptor\ClassDescriptor;
+use Psi\Component\Description\Descriptor\StringDescriptor;
+use Psi\Component\Description\EnhancerInterface;
 use Psi\Component\Description\Subject;
 
 class TestEnhancer implements EnhancerInterface

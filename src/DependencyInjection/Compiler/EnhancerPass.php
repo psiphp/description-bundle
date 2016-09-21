@@ -42,7 +42,7 @@ class EnhancerPass implements CompilerPassInterface
         if ($diff) {
             throw new \InvalidArgumentException(sprintf(
                 'Unknown enhancer(s) "%s" specified. Known enhancers: "%s"',
-                implode('", "', $diff), 
+                implode('", "', $diff),
                 implode('", "', array_keys($enhancerRefs))
             ));
         }

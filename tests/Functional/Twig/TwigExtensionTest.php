@@ -19,7 +19,7 @@ class TwigExtensionTest extends FunctionalTestCase
         $object->title = 'Bar Boo';
         $twig = $this->getContainer()->get('twig');
         $result = $twig->render('describe_object.html.twig', [
-            'object' => $object
+            'object' => $object,
         ]);
         $this->assertEquals('<h1>Bar Boo</h1>', trim($result));
     }

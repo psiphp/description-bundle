@@ -11,7 +11,7 @@ class DescriptionFactoryTest extends FunctionalTestCase
      */
     public function testDescribe()
     {
-        $object = new \stdClass;
+        $object = new \stdClass();
         $object->title = 'Hello World';
         $factory = $this->getContainer()->get('psi_description.factory');
         $description = $factory->describe(Subject::createFromObject($object));

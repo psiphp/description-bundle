@@ -1,10 +1,10 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Debug\Debug;
 use Psi\Bundle\Description\Example\app\AppKernel;
+use Symfony\Component\Debug\Debug;
+use Symfony\Component\HttpFoundation\Request;
 
-require(__DIR__ . '/../../vendor/autoload.php');
+require __DIR__ . '/../../vendor/autoload.php';
 
 Debug::enable();
 require_once __DIR__.'/../app/AppKernel.php';
