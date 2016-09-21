@@ -1,5 +1,5 @@
-Psi Description Bundle
-======================
+Description Bundle
+==================
 
 The description bundle integrates the Psi Description component with
 Symfony.
@@ -77,3 +77,5 @@ Add a new schema_extension with the alias "foobar":
     _service id="acme_description.schema.extension.foobar" class="Acme\Description\Schema\FoobarExtension">
         <tag name="psi_description.schema_extension" alias="foobar" />
     </service>
+
+.. _Psi Description: https://psiphp.readthedocs.io/en/latest/components/description/docs/index.html
