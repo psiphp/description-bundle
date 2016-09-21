@@ -1,1 +1,1 @@
- phpunit
+ ./vendor/bin/phpunit
