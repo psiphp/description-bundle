@@ -22,6 +22,7 @@ class Configuration implements ConfigurationInterface
         $rootNode->addDefaultsIfNotSet();
         $rootNode->children()
             ->arrayNode('enhancers')
+                ->info('Enabled description enhancers')
                 ->prototype('scalar')->end()
             ->end()
             ->arrayNode('schema')
@@ -32,6 +33,7 @@ class Configuration implements ConfigurationInterface
                         ->defaultValue(true)
                     ->end()
                     ->arrayNode('extensions')
+                        ->info('Enabled schema extensions')
                         ->defaultValue(['std'])
                         ->prototype('scalar')->end()
                     ->end()
