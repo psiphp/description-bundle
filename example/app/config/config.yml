@@ -1,3 +1,17 @@
 framework:
     secret: secret
 
+psi_description:
+    enhancers:
+        - "test"
+
+services:
+    test_enhancer:
+        class: "Psi\\Bundle\\Description\\Example\\src\\TestEnhancer"
+        tags:
+            - { name: "psi_description.enhancer", alias: "test" }
+
+    test_extension:
+        class: "Psi\\Bundle\\Description\\Example\\src\\TestExtension"
+        tags: 
+            - { name: "psi_description.schema_extension", alias: "test" }

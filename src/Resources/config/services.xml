@@ -4,13 +4,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <services>
-        <service id="acme_foo.example" class="Acme\FooBundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="psi_description.factory" class="Psi\Component\Description\DescriptionFactory">
+            <argument type="collection" /> <!-- enhancers -->
+            <argument/> <!-- schema -->
+        </service>
+
+        <service id="psi_description.schema" class="Psi\Component\Description\Schema\Schema">
+            <argument type="collection" /> <!-- extensions -->
+        </service>
+
+        <service id="psi_description.extension.standard" class="Psi\Component\Description\Schema\Extension\StandardExtension">
+            <tag name="psi_description.schema_extension" alias="std" />
+        </service>
+
+        <service id="psi_description.extension.hierarchy" class="Psi\Component\Description\Schema\Extension\HierarchyExtension">
+            <tag name="psi_description.schema_extension" alias="hierarchy" />
         </service>
     </services>
-    -->
 </container>
+

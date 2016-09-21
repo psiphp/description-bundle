@@ -6,6 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
+use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -24,5 +25,14 @@ class PsiDescriptionExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $factoryDef = $container->getDefinition('psi_description.factory');
+
+        if ($config['schema']['enabled']) {
+            $factoryDef->replaceArgument(1, new Reference('psi_description.schema'));
+        }
+
+        $container->setParameter('psi_description.enhancers', $config['enhancers']);
+        $container->setParameter('psi_description.schema.extensions', $config['schema']['extensions']);
     }
 }
