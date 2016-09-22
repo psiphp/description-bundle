@@ -30,7 +30,7 @@ class DescriptionExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'cmf_resource_description';
+        return 'psi_resource_description';
     }
 
     private function getSubject($classOrObject)
