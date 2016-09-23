@@ -30,6 +30,7 @@ class PsiDescriptionExtension extends Extension
         }
 
         $container->setParameter('psi_description.enhancers', $config['enhancers']);
+        $container->setParameter('psi_description.subject_resolvers', $config['subject_resolvers']);
         $container->setParameter('psi_description.schema.extensions', $config['schema']['extensions']);
     }
 }

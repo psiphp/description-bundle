@@ -65,6 +65,19 @@ Add a new description enhancer with the alias "foobar":
         <tag name="psi_description.enhancer" alias="foobar" />
     </service>
 
+Subject Resolvers
+~~~~~~~~~~~~~~~~~
+
+**Tag**: `psi_description.subject_resolver`
+
+Add a new subject resolver with the alias "foobar":
+
+.. code-block:: xml
+
+    <service id="acme_description.subject_resolver.foobar" class="Acme\Description\SubjectResolver\FoobarResolver">
+        <tag name="psi_description.subject_resolver" alias="foobar" />
+    </service>
+
 Schema Extensions
 ~~~~~~~~~~~~~~~~~
 
