@@ -12,13 +12,13 @@ class TestEnhancer implements EnhancerInterface
 {
     public function enhanceFromClass(DescriptionInterface $description, \ReflectionClass $class)
     {
-        $description->set(new ClassDescriptor('std.class', $class));
-        $description->set(new StringDescriptor('std.title', 'Foobar'));
+        $description->set('std.class', new ClassDescriptor($class));
+        $description->set('std.title', new StringDescriptor('Foobar'));
     }
 
     public function enhanceFromObject(DescriptionInterface $description, Subject $subject)
     {
-        $description->set(new StringDescriptor('example.title', $subject->getObject()->title));
+        $description->set('example.title', new StringDescriptor($subject->getObject()->title));
     }
 
     public function supports(Subject $subject)

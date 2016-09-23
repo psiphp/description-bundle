@@ -8,6 +8,7 @@
         <service id="psi_description.factory" class="Psi\Component\Description\DescriptionFactory">
             <argument type="collection" /> <!-- enhancers -->
             <argument/> <!-- schema -->
+            <argument type="collection" /> <!-- subject resolvers -->
         </service>
 
         <service id="psi_description.schema" class="Psi\Component\Description\Schema\Schema">
