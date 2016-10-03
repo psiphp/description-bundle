@@ -59,6 +59,14 @@ class DescriptionFactoryPass implements CompilerPassInterface
                     implode('", "', array_keys($refs[$key]))
                 ));
             }
+
+            $orderedRefs = [];
+
+            foreach ($enabled as $enabledAlias) {
+                $orderedRefs[$enabledAlias] = $refs[$key][$enabledAlias];
+            }
+
+            $refs[$key] = $orderedRefs;
         }
 
         $factoryDef->replaceArgument(0, array_values($refs['enhancer']));

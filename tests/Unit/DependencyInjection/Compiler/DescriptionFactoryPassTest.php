@@ -110,4 +110,28 @@ class DescriptionFactoryPassTest extends \PHPUnit_Framework_TestCase
 
         $this->pass->process($this->container->reveal());
     }
+
+    /**
+     * It should add resolvers/enhancers in the order in which they are enabled.
+     */
+    public function testOrder()
+    {
+        $this->container->findTaggedServiceIds('psi_description.subject_resolver')->willReturn([
+            'foobar.service.1.id' => [['alias' => '1-foobar']],
+            'foobar.service.2.id' => [['alias' => '2-foobar']],
+            'foobar.service.3.id' => [['alias' => '3-foobar']],
+        ]);
+        $this->container->findTaggedServiceIds('psi_description.enhancer')->willReturn([]);
+        $this->container->getParameter('psi_description.enhancers')->willReturn([]);
+        $this->container->getParameter('psi_description.subject_resolvers')->willReturn(['3-foobar', '1-foobar', '2-foobar']);
+
+        $this->factoryDef->replaceArgument(0, [])->shouldBeCalled();
+        $this->factoryDef->replaceArgument(2, [
+            'foobar.service.3.id',
+            'foobar.service.1.id',
+            'foobar.service.2.id',
+        ])->shouldBeCalled();
+
+        $this->pass->process($this->container->reveal());
+    }
 }
