@@ -1,5 +1,7 @@
 framework:
     secret: secret
+    annotations:
+        enabled: false
 
 psi_description:
     enhancers:
