@@ -22,6 +22,10 @@
         <service id="psi_description.extension.hierarchy" class="Psi\Component\Description\Schema\Extension\HierarchyExtension">
             <tag name="psi_description.schema_extension" alias="hierarchy" />
         </service>
+
+        <service id="psi_description.extension.file" class="Psi\Component\Description\Schema\Extension\FileExtension">
+            <tag name="psi_description.schema_extension" alias="file" />
+        </service>
     </services>
 </container>
 
