@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/psiphp/description-bundle.svg?branch=master)](https://travis-ci.org/psiphp/description-bundle)
 [![StyleCI](https://styleci.io/repos/68720675/shield)](https://styleci.io/repos/68720675)
+[![Scrutinizer Code
+Quality](https://scrutinizer-ci.com/g/psiphp/content-type/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/psiphp/description-bundle/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/psiphp/description-bundle/version.png)](https://packagist.org/packages/psiphp/description-bundle)
 [![Total Downloads](https://poser.pugx.org/psiphp/content-type/d/total.png)](https://packagist.org/packages/psiphp/description-bundle)
 
@@ -24,4 +26,4 @@ $ composer require 'psiphp/description-bundle'
 
 ## Contributing
 
-Just go ahead and create a PR, you know you need to..
+All contributions are welcome, go ahead and make a PR!
