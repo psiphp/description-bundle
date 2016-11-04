@@ -6,7 +6,7 @@
 [![Scrutinizer Code
 Quality](https://scrutinizer-ci.com/g/psiphp/description-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/psiphp/description-bundle/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/psiphp/description-bundle/version.png?format=plastic)](https://packagist.org/packages/psiphp/description-bundle)
-[![Total Downloads](https://poser.pugx.org/psiphp/content-type/d/total.png?format=plastic)](https://packagist.org/packages/psiphp/description-bundle)
+[![Total Downloads](https://poser.pugx.org/psiphp/description-bundle/d/total.png?format=plastic)](https://packagist.org/packages/psiphp/description-bundle)
 
 
 This component is part of the Psi Content Management Framework
