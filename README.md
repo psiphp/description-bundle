@@ -15,8 +15,7 @@ Symfony Bundle for integrating the Psi [Description](https://github.com/psiphp/d
 
 ## Documentation
 
-You can find out more about this component and others
-[here](https://psiphp.readthedocs.io/en/latest/components/description-bundle/docs/index.html).
+See the documentation in [doc/index.rst](https://github.com/psiphp/description-bundle/blob/master/docs/index.rst).
 
 ## Installation
 
